@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Michal's website",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0 -p 4000",
+    "dev": "next dev -H 0.0.0.0 -p 3000",
     "build": "next build"
   },
   "keywords": [],
   "author": "Michal Zapala",
   "license": "MIT",
   "dependencies": {
+    "@chakra-ui/icons": "^1.1.1",
     "@chakra-ui/react": "^1.7.2",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
