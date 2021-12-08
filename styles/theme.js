@@ -8,16 +8,21 @@ const breakpoints = createBreakpoints({
     '2xl': '1536px'
 })
 
+const config = {
+    initialColorMode: 'dark',
+    useSystemColorMode: false,
+}
+
 const styles = {
     global: props => ({
         body: {
-            bg: mode('#000', '#202023')(props),
+            bg: mode('#f4f4f4', '#202023')(props),
         }
     })
 }
 
 const theme = extendTheme({
-    styles, breakpoints
+    breakpoints, config, styles
 })
 
 export default theme

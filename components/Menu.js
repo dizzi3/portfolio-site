@@ -4,18 +4,18 @@ import NextLink from 'next/link'
 function Menu({ direction, display }){
 
     return(
-        <Flex direction={direction} display={display} mt={{sm: '4em', md: 0}}>
+        <Flex direction={direction} display={display} mt={{sm: '6em', md: 0}}>
 
             <NextLink href='/'>
-                <Link p={{sm: 0, md: '0 1em'}} fontSize='1.5rem'>Home</Link>
+                <Link p={{sm: '.3em 0', md: '0 1em'}} fontSize='1.5rem' fontFamily='Ubuntu, sans-serif;'>Home</Link>
             </NextLink>
 
             <NextLink href='/'>
-                <Link p={{sm: 0, md: '0 1em'}} fontSize='1.5rem'>Works</Link>
+                <Link p={{sm: '.3em 0', md: '0 1em'}} fontSize='1.5rem' fontFamily='Ubuntu, sans-serif;'>Works</Link>
             </NextLink>
 
             <NextLink href='/' >
-                <Link p={{sm: 0, md: '0 1em'}} fontSize='1.5rem'>Contact</Link>
+                <Link p={{sm: '.3em 0', md: '0 1em'}} fontSize='1.5rem' fontFamily='Ubuntu, sans-serif;'>Contact</Link>
             </NextLink>
 
         </Flex>
