@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 function Home(){
     return(
 
-        <Container maxW='100%' p={0}> 
+        <Container maxW='100%' p={0} color="#fff"> 
 
             <title>Michał Zapała - Homepage</title>
 

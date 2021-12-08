@@ -1,6 +1,6 @@
-import { Container, Flex, Spacer, IconButton, Link, VStack, Heading, Button, Image } from '@chakra-ui/react'
+import { Container, Flex, Spacer, IconButton, VStack, Heading, Button, Image } from '@chakra-ui/react'
 import {MoonIcon} from '@chakra-ui/icons'
-import NextLink from 'next/link'
+import Menu from './Menu';
 
 function WelcomeSection(){
 
@@ -8,33 +8,26 @@ function WelcomeSection(){
 
     return (
 
-        <Container w='100%' p='3em 0' maxW='50%'>
+        <Container w='100%' maxW='50%' pt='8em' pb='22em'>
             
-            <Flex>
-                <Image src={logoImg} width='3em' height='3em' alt='logo'/>
-                <Spacer/>
-                <IconButton aria-label='Toggle night mode button' icon={<MoonIcon/>} />
+            <Flex direction={{sm: 'column', md: 'row'}} textAlign='center'>
+
+                <Flex w='100%'>
+                    <Image src={logoImg} width='3em' height='3em' alt='logo'/>
+                    <Spacer/>
+                    <Flex>
+                        <Menu direction='row' display={{ sm: 'none', md: 'flex'}}/>
+                        <IconButton aria-label='Toggle night mode button' icon={<MoonIcon/>} colorScheme='blue' ml='1em'/>
+                    </Flex>
+                </Flex>
+                
+                <Menu direction='column' display={{ sm: 'flex', md: 'none'}}/>
+
             </Flex>
 
-            <VStack spacing={4} mt={10}>
-
-                <NextLink href='/'>
-                    <Link fontSize='1.5rem'>Home</Link>
-                </NextLink>
-
-                <NextLink href='/'>
-                    <Link fontSize='1.5rem'>Works</Link>
-                </NextLink>
-
-                <NextLink href='/'>
-                    <Link fontSize='1.5rem'>Contact</Link>
-                </NextLink>
-
-            </VStack>
-
-            <VStack mt={20} align='left'>
+            <VStack mt='15em' align='left' spacing='.5rem'>
                 <Heading as='h1' fontSize='3rem'>Michał Zapała</Heading>
-                <Heading as='h2' fontSize='2rem'>Disciplined developer =)</Heading>
+                <Heading as='h2' fontSize='2rem'>Web Developer =)</Heading>
                 <Button colorScheme='blue' maxW='8em'>About Me</Button>
             </VStack>
 

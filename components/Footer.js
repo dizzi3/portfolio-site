@@ -11,7 +11,7 @@ function Footer(){
             <VStack>
                 <Image src={logoImg} width='3em' height='3em' alt='logo'/>
                 <a target='_blank' href='https://github.com/dizzi3' ><Link fontSize='1.3rem'>Github</Link></a>
-                <Text>&#169;2021 Michał Zapała</Text>
+                <Text>&#169; 2021 Michał Zapała</Text>
             </VStack>
         </Container>
 
