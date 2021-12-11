@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0, 2021-09-20)"
-   sodipodi:docname="logoo.svg"
+   sodipodi:docname="logo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -60,8 +60,8 @@
        inkscape:export-ydpi="96"><tspan
          x="7.6679688"
          y="565.33556"
-         id="tspan13512"><tspan
-           style="fill:#ff0100"
-           id="tspan13510">&lt;/&gt;</tspan></tspan></text>
+         id="tspan21731"><tspan
+           style="fill:#ff000e"
+           id="tspan21729">&lt;/&gt;</tspan></tspan></text>
   </g>
 </svg>

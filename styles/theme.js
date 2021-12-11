@@ -5,6 +5,7 @@ import { createBreakpoints } from '@chakra-ui/theme-tools'
 const breakpoints = createBreakpoints({
     sm: '0px',
     md: '1150px',
+    lg: '1400px',
     '2xl': '1536px'
 })
 
@@ -15,14 +16,24 @@ const config = {
 
 const styles = {
     global: props => ({
+        html: {
+            'scroll-behavior': 'smooth'
+        },
+
         body: {
             bg: mode('#f4f4f4', '#202023')(props),
         }
-    })
+    }),
+}
+
+const colors = {
+    reddish: '#e33b44',
+    blueish: '#91cef1',
+    bgWhite: '#f8f8f8',
 }
 
 const theme = extendTheme({
-    breakpoints, config, styles
+    breakpoints, config, styles, colors
 })
 
 export default theme

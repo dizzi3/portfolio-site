@@ -10,7 +10,7 @@ function Menu({ direction, display }){
                 <Link p={{sm: '.3em 0', md: '0 1em'}} fontSize='1.5rem' fontFamily='Ubuntu, sans-serif;' fontWeight='500' _hover={{color: useColorModeValue('#ff0100', '#65b5e9')}}>Home</Link>
             </NextLink>
 
-            <NextLink href='/'>
+            <NextLink href='#projects'>
                 <Link p={{sm: '.3em 0', md: '0 1em'}} fontSize='1.5rem' fontFamily='Ubuntu, sans-serif;' fontWeight='500' _hover={{color: useColorModeValue('#ff0100', '#65b5e9')}}>Works</Link>
             </NextLink>
 

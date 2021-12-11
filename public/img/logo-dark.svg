@@ -24,7 +24,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.66992144"
-     inkscape:cx="-97.026303"
+     inkscape:cx="-97.026302"
      inkscape:cy="280.62992"
      inkscape:window-width="1920"
      inkscape:window-height="1013"
@@ -60,6 +60,8 @@
        inkscape:export-ydpi="96"><tspan
          x="7.6679688"
          y="565.33556"
-         id="tspan246199">&lt;/&gt;</tspan></text>
+         id="tspan8245"><tspan
+           style="fill:#91cef1"
+           id="tspan8243">&lt;/&gt;</tspan></tspan></text>
   </g>
 </svg>
