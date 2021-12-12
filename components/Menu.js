@@ -5,7 +5,7 @@ import StyledLink from './StyledLink'
 function Menu({ direction, display }){
 
     return(
-        <Flex direction={direction} display={display} mt={{sm: '6em', md: 0}}>
+        <Flex direction={direction} display={display} mt={{sm: '5em', md: 0}} gridGap='1em'>
 
                 <StyledLink href='/'>Home</StyledLink>
 

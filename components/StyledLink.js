@@ -1,7 +1,7 @@
 import { useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
-function StyledLink({children, href, target}){
+function StyledLink({children, href, target, marginBottom}){
 
     const Link = styled.a`
         color: ${useColorModeValue('#000', '#f8f8f8')};
@@ -12,6 +12,7 @@ function StyledLink({children, href, target}){
         position: relative;
         text-decoration: none;
         width: fit-content;
+        margin-bottom: ${marginBottom};
 
         &:hover{
             color: ${useColorModeValue('#ff0100', '#65b5e9')};

@@ -5,6 +5,7 @@ import NextLink from 'next/link'
 import Project from '../components/Project'
 import Footer from '../components/Footer'
 import Logo from '../components/Logo'
+import ProjectNavbar from '../components/ProjectNavbar'
 
 function Chatty(){
 
@@ -14,12 +15,8 @@ function Chatty(){
         
         <Container w='100%' maxW='100%' p={0} id='home'>
             <Container w='100%' maxW='50%' pt='8em' pb='7em' color={useColorModeValue('#000', '#fff')}>
-                    <Flex alignItems='center' mb='7em'>
-                        <a href='#home'><Logo smallDimensions='3em' mediumDimensions='4.5em' colorMode={colorMode}/></a>
-                        <Spacer/>
-                        <IconButton _focus={{}} aria-label='Toggle night mode' icon={<MoonIcon/>}
-                                    colorScheme={useColorModeValue('red', 'blue')} onClick={toggleColorMode}/>
-                    </Flex>
+
+                    <ProjectNavbar/>
 
                     <Image src='/img/Chatty-fullsize.png' w='100%' border='1px solid #fff'/>
 
@@ -54,9 +51,6 @@ function Chatty(){
 
                             </Button>
                         </a>
-
-                        <NextLink href='/'><Button fontFamily='DM Sans, sans-serif;' fontSize='1em' colorScheme={useColorModeValue('red', 'blue')} 
-                                                _focus={{}} fontWeight='500'>Home</Button></NextLink>
 
                     </VStack>
 
