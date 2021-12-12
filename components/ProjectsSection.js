@@ -2,7 +2,7 @@ import { Container, useColorModeValue, Heading } from '@chakra-ui/react'
 import Project from './Project'
 
 function ProjectsSection(){
-
+    
     return (
 
         <Container bg={useColorModeValue('#000', 'bgWhite')} p='3em 0' maxW='100%' color='#000' id='projects'>

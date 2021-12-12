@@ -4,19 +4,18 @@ import { FaGithub } from 'react-icons/fa'
 import NextLink from 'next/link'
 import Project from '../components/Project'
 import Footer from '../components/Footer'
+import Logo from '../components/Logo'
 
 function Chatty(){
 
-    const logoImg = '/img/logo' + useColorModeValue('', '-dark') + '.svg';
-
-    const { toggleColorMode } = useColorMode()
+    const { colorMode, toggleColorMode } = useColorMode()
 
     return(
         
         <Container w='100%' maxW='100%' p={0} id='home'>
             <Container w='100%' maxW='50%' pt='8em' pb='7em' color={useColorModeValue('#000', '#fff')}>
                     <Flex alignItems='center' mb='7em'>
-                        <a href='#home'><Image src={logoImg} width='4.5em' height='4.5em' alt='logo'/></a>
+                        <a href='#home'><Logo smallDimensions='3em' mediumDimensions='4.5em' colorMode={colorMode}/></a>
                         <Spacer/>
                         <IconButton _focus={{}} aria-label='Toggle night mode' icon={<MoonIcon/>}
                                     colorScheme={useColorModeValue('red', 'blue')} onClick={toggleColorMode}/>
@@ -36,7 +35,11 @@ function Chatty(){
                             <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>React</Box></ListItem>
                             <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>Mongodb (mongoose)</Box></ListItem>
                             <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>Socket.io</Box></ListItem>
-                            <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>Languages: Javascript, HTML, CSS</Box></ListItem>
+                            <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>Languages: 
+                                <Text color={useColorModeValue('#ff7700' ,'#fff94d')} display='inline'> Javascript</Text>,
+                                <Text color={useColorModeValue('#ae00ff', '#E33B44')} display='inline'> HTML</Text>, 
+                                <Text color={useColorModeValue('#0073ff', '#8083FF')} display='inline'> CSS</Text>
+                            </Box></ListItem>
                         </UnorderedList>
                     </Text>
 

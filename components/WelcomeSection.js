@@ -2,12 +2,12 @@ import { Container, Flex, Spacer, IconButton, VStack, Heading, Button, Image, us
 import { MoonIcon } from '@chakra-ui/icons'
 import Menu from './Menu';
 import { FaGithub } from 'react-icons/fa'
+import Logo from './Logo';
+import { useEffect, useState } from 'react';
 
 function WelcomeSection(){
 
-    const logoImg = '/img/logo' + useColorModeValue('', '-dark') + '.svg';
-
-    const { toggleColorMode } = useColorMode()
+    const { colorMode, toggleColorMode } = useColorMode()
 
     return (
 
@@ -16,11 +16,11 @@ function WelcomeSection(){
             <Flex direction={{sm: 'column', md: 'row'}} alignItems='center'>
 
                 <Flex w='100%' alignItems='center'>
-                    <a href='#home'><Image src={logoImg} width={{sm: '3em', md: '4.5em'}} height={{sm: '3em', md: '4.5em'}} alt='logo'/></a>
+                    <a href='#home'><Logo smallDimensions='3em' mediumDimensions='4.5em' colorMode={colorMode}/></a>
                     <Spacer/>
                     <Flex>
                         <Menu direction='row' display={{ sm: 'none', md: 'flex'}}/>
-                        <IconButton _focus={{}} aria-label='Toggle night mode' icon={<MoonIcon/>} colorScheme={useColorModeValue('red', 'blue')} ml='1em' onClick={toggleColorMode}/>
+                        <IconButton _focus={{}} aria-label='Toggle night mode' icon={<MoonIcon/>} colorScheme={useColorModeValue('red', 'blue')} ml='1em' onClick={() => {toggleColorMode();}}/>
                     </Flex>
                 </Flex>
                 
