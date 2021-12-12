@@ -9,8 +9,8 @@ function ProjectsSection(){
             <Container maxW='90%' p={0} centerContent>
                 <Heading as='h1' w='fit-content' mb='.6em' color={useColorModeValue('#fff', '#000')} fontFamily='Ubuntu, sans-serif;' fontSize='3em' fontWeight='700'>My Projects</Heading>
                 <Project name='Chatty' description='An app allowing users to chat in real-time' img='/img/Chatty-transparent.png' subpage='Chatty'/>
-                <Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png'/>
-                <Project name='Saper' description='A minesweeping game' img='/img/Saper-transparent.png'/>
+                <Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png' subpage='Exoplanets'/>
+                <Project name='Saper' description='A minesweeping game' img='/img/Saper-transparent.png' subpage='Saper'/>
             </Container>
         </Container>
 
