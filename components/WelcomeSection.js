@@ -3,10 +3,13 @@ import { MoonIcon } from '@chakra-ui/icons'
 import Menu from './Menu';
 import { FaGithub } from 'react-icons/fa'
 import Logo from './Logo';
+import { useState } from 'react';
+import ContactForm from './ContactForm';
 
 function WelcomeSection(){
 
     const { colorMode, toggleColorMode } = useColorMode()
+    const [ contactFormDisplay, setContactFormDisplay ] = useState('none')
 
     return (
 
@@ -31,7 +34,8 @@ function WelcomeSection(){
                 <VStack align='left' spacing='.8rem' w='fit-content'>
                     <Heading mb={{sm: '.1em', md: 0}} as='u' fontSize={{sm: '2.5rem', md: '3.5rem'}} textUnderlineOffset='.1em' fontFamily='Ubuntu, sans-serif;' fontWeight='500' letterSpacing={{sm: '.1em', md: '.15em'}}>Michał Zapała</Heading>
                     <Heading as='h2' fontSize={{sm: '1.4rem', md: '2.2rem'}} fontFamily='Ubuntu, sans-serif;' fontWeight='400'>Web Developer =)</Heading>
-                    <Button colorScheme={useColorModeValue('red', 'blue')} maxW={{sm: '7em', md: '10em'}} fontFamily='Ubuntu, sans-serif' fontWeight='500' color={useColorModeValue('#000', '#000')} _focus={{}}>About Me</Button>
+                    <Button colorScheme={useColorModeValue('red', 'blue')} maxW={{sm: '7em', md: '10em'}} fontFamily='DM Sans, sans-serif;' fontWeight='500' fontSize='1.1em' 
+                            color={useColorModeValue('#000', '#000')} _focus={{}} onClick={() => setContactFormDisplay('block')}>About Me</Button>
                 </VStack>
 
                 <Spacer/>
@@ -40,6 +44,8 @@ function WelcomeSection(){
                  cursor: 'pointer' }} mt={{sm: '6em', md:'8em', lg: 0}}/></a></Center>
 
             </Flex>
+
+            <ContactForm displayProp={contactFormDisplay} setDisplayState={setContactFormDisplay}/>
 
         </Container>
 

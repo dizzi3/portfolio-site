@@ -23,7 +23,7 @@ function Chatty(){
                     <Text fontFamily='DM Sans, sans-serif;' fontSize='1.4em' mt='1.5em'
                         borderBottom={useColorModeValue('1px solid #000', '1px solid #fff')} pb='2.5em'>
                         <Box color={useColorModeValue('reddish', 'blueish')} display='inline' fontFamily='Ubuntu, sans-serif;'><strong>Saper </strong></Box> 
-                        is a remake of a classic minesweeping game. Map is generated randomly. User can choose it's size and number of bombs.
+                        is a remake of a classic minesweeping game. Map is generated randomly. User can choose map size and number of bombs.
                     </Text>
 
                     <Text fontFamily='Ubuntu, sans-serif;' fontSize='1.2em' mt='2.5em' mb='4em'>
@@ -56,8 +56,8 @@ function Chatty(){
             <Container bg={useColorModeValue('#000', 'bgWhite')} p='3em 0' maxW='100%' color='#000' w='100%'>
                 <Container maxW='90%' p={0} centerContent>
                     <Heading as='h2' w='fit-content' mb='.4em' color={useColorModeValue('#fff', '#000')} fontFamily='Ubuntu, sans-serif;' fontSize='2em' fontWeight='700'>Check out my other projects!</Heading>
-                    <Project name='Chatty' description='An app allowing users to chat in real-time' img='/img/Chatty-transparent.png'/>
-                    <Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png'/>
+                    <Project name='Chatty' description='An app allowing users to chat in real-time' img='/img/Chatty-transparent.png' subpage='Chatty'/>
+                    <Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png' subpage='Exoplanets'/>
                 </Container>
             </Container>
 
