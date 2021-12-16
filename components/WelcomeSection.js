@@ -1,15 +1,18 @@
-import { Container, Flex, Spacer, IconButton, VStack, Heading, Button, Image, useColorMode, useColorModeValue, Center, Icon } from '@chakra-ui/react'
+import { Container, Flex, Spacer, IconButton, VStack, Heading, Button, Box, useColorMode, useColorModeValue, Center, Icon } from '@chakra-ui/react'
 import { MoonIcon } from '@chakra-ui/icons'
-import Menu from './Menu';
-import { FaGithub } from 'react-icons/fa'
-import Logo from './Logo';
 import { useState } from 'react';
+import { FaGithub } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 import ContactForm from './ContactForm';
+import Menu from './Menu';
+import Logo from './Logo';
 
 function WelcomeSection(){
 
     const { colorMode, toggleColorMode } = useColorMode()
     const [ contactFormDisplay, setContactFormDisplay ] = useState('none')
+
+    const MotionBox = motion(Box)
 
     return (
 
@@ -40,8 +43,14 @@ function WelcomeSection(){
 
                 <Spacer/>
                 
-                <Center><a href='https://github.com/dizzi3' target='_blank'><Icon as={FaGithub} w='8em' h='8em' _hover={{ color: useColorModeValue('reddish', 'blueish'),
-                 cursor: 'pointer' }} mt={{sm: '6em', md:'8em', lg: 0}}/></a></Center>
+                <Center>
+                    <a href='https://github.com/dizzi3' target='_blank'>
+                        <MotionBox whileHover={{ scale: 1.15}} transition={{ duration: .4 }}>
+                            <Icon as={FaGithub} w='8em' h='8em' _hover={{ color: useColorModeValue('reddish', 'blueish'), cursor: 'pointer' }}
+                                    mt={{sm: '6em', md:'8em', lg: 0}} />
+                            </MotionBox>
+                     </a>
+                </Center>
 
             </Flex>
 

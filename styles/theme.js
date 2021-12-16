@@ -28,7 +28,7 @@ const styles = {
 
 const colors = {
     reddish: '#e33b44',
-    blueish: '#91cef1',
+    blueish: '#90CDF4',
     bgWhite: '#f8f8f8',
 }
 
