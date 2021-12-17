@@ -8,7 +8,6 @@ import ContactForm from '../components/ContactForm'
 
 function Chatty(){
 
-    const { colorMode, toggleColorMode } = useColorMode()
     const [ contactFormDisplay, setContactFormDisplay ] = useState('none')
 
     return(

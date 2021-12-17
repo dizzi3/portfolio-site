@@ -1,9 +1,9 @@
+import ContactForm from './ContactForm';
 import { Container, Flex, Spacer, IconButton, VStack, Heading, Button, Box, useColorMode, useColorModeValue, Center, Icon } from '@chakra-ui/react'
 import { MoonIcon } from '@chakra-ui/icons'
 import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import ContactForm from './ContactForm';
 import Menu from './Menu';
 import Logo from './Logo';
 

@@ -6,17 +6,22 @@ import Project from '../components/Project'
 import Footer from '../components/Footer'
 import Logo from '../components/Logo'
 import ProjectNavbar from '../components/ProjectNavbar'
+import { useState } from 'react'
+import ContactForm from '../components/ContactForm'
 
 function Chatty(){
 
-    const { colorMode, toggleColorMode } = useColorMode()
+    const [ contactFormDisplay, setContactFormDisplay ] = useState('none')
 
     return(
         
         <Container w='100%' maxW='100%' p={0} id='home'>
+
+            <ContactForm displayProp={contactFormDisplay} setDisplayState={setContactFormDisplay}/>
+
             <Container w='100%' maxW='50%' pt='8em' pb='7em' color={useColorModeValue('#000', '#fff')}>
 
-                    <ProjectNavbar/>
+                    <ProjectNavbar setContactFormDisplay={setContactFormDisplay}/>
 
                     <Image src='/img/Chatty-fullsize.png' w='100%' border='1px solid #fff'/>
 

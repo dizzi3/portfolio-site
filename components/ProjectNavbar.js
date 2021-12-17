@@ -14,7 +14,7 @@ function ProjectNavbar({setContactFormDisplay}){
                             <Spacer/>
                             <Flex display={{ sm: 'none', md: 'flex'}}>
                                 <StyledLink href='/'>Home</StyledLink>
-                                <StyledLink><Box onClick={() => setContactFormDisplay(true)}>Contact</Box></StyledLink>
+                                <StyledLink><Box onClick={() => setContactFormDisplay('block')}>Contact</Box></StyledLink>
                             </Flex>
                             <IconButton _focus={{}} aria-label='Toggle night mode' icon={<MoonIcon/>}
                                         colorScheme={useColorModeValue('red', 'blue')} onClick={toggleColorMode} ml='2em'/>
@@ -22,7 +22,7 @@ function ProjectNavbar({setContactFormDisplay}){
 
             <VStack pb='5em' spacing='1em' display={{sm: 'flex', md: 'none'}}>
                 <StyledLink href='/'>Home</StyledLink>
-                <StyledLink><Box onClick={() => setContactFormDisplay(true)}>Contact</Box></StyledLink>
+                <StyledLink><Box onClick={() => setContactFormDisplay('block')}>Contact</Box></StyledLink>
             </VStack>
         </Container>
     )

@@ -4,8 +4,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import emailjs from 'emailjs-com'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import React from 'react';
 
-function ContactForm({displayProp, setDisplayState}){
+export function ContactForm({displayProp, setDisplayState}){
 
     const listBulletColor = '#00C6CF'
     const listItemColor = '#000'
@@ -128,4 +129,4 @@ function ContactForm({displayProp, setDisplayState}){
 
 }
 
-export default ContactForm
+export default React.memo(ContactForm)
