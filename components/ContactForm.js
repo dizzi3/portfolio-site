@@ -2,6 +2,8 @@ import { Flex,  Container, Heading, Text, UnorderedList, ListItem, Box, Icon, Fo
 import { CgClose } from 'react-icons/cg'
 import { AnimatePresence, motion } from 'framer-motion'
 import emailjs from 'emailjs-com'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ContactForm({displayProp, setDisplayState}){
 
@@ -37,7 +39,12 @@ function ContactForm({displayProp, setDisplayState}){
     const sendAnEmail = (e) => {
         e.preventDefault();
         
-        emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, '#messageForm', process.env.USER_ID);
+        emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, '#messageForm', process.env.USER_ID)
+                .then(function(response){
+                    toast.success('Successfully sent Your message!')
+                }, function(error){
+                    toast.error('An error occurred while sending the message!')
+                })
     }
 
     return(
@@ -109,7 +116,11 @@ function ContactForm({displayProp, setDisplayState}){
                     </Container>
                 </Flex>
 
+
             </MotionFlex>
+
+            <ToastContainer/>
+
         </AnimatePresence>
 
     )
