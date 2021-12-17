@@ -46,7 +46,7 @@ function WelcomeSection(){
                     
                     <Center>
                         <a href='https://github.com/dizzi3' target='_blank'>
-                            <MotionBox whileHover={{ scale: [1, 1.12, 1] }} transition={{ duration: .8 }}>
+                            <MotionBox whileHover={{ scale: [1, 1.12, 1] }} transition={{ duration: .8, type: 'spring', bounce: .7 }}>
                                 <Icon as={FaGithub} w='8em' h='8em' _hover={{ color: useColorModeValue('reddish', 'blueish'), cursor: 'pointer' }}
                                         mt={{sm: '6em', md:'8em', lg: 0}} />
                                 </MotionBox>

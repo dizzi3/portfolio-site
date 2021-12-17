@@ -1,6 +1,7 @@
 import { Flex,  Container, Heading, Text, UnorderedList, ListItem, Box, Icon, FormControl, FormLabel, Input, Button, Textarea } from '@chakra-ui/react'
 import { CgClose } from 'react-icons/cg'
 import { AnimatePresence, motion } from 'framer-motion'
+import emailjs from 'emailjs-com'
 
 function ContactForm({displayProp, setDisplayState}){
 
@@ -31,6 +32,12 @@ function ContactForm({displayProp, setDisplayState}){
 
     function closeForm(){
         setDisplayState('none')
+    }
+
+    const sendAnEmail = (e) => {
+        e.preventDefault();
+        
+        emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, '#messageForm', process.env.USER_ID);
     }
 
     return(
@@ -80,23 +87,25 @@ function ContactForm({displayProp, setDisplayState}){
                                     _hover={{ cursor:'pointer', color:'#63B3ED'}} onClick={closeForm}/></MotionBox>
                         <Heading as='h4' fontFamily='Readex Pro' fontWeight='500' mb='.5em' fontSize={{sm: '2.2em', sm_md: '1.8em', md: '2.4em'}}>Contact me</Heading>
 
-                        <FormControl id='email' isRequired mb='.5em'>
-                            <FormLabel fontFamily={labelFont} fontSize={{sm: '1em', sm_md: '.9em', md: '1em'}}>Email address</FormLabel>
-                            <Input type='email' fontFamily={inputFont} fontWeight='400'/>
-                        </FormControl>
+                        <form id='messageForm'>
+                            <FormControl id='email' isRequired mb='.5em'>
+                                <FormLabel fontFamily={labelFont} fontSize={{sm: '1em', sm_md: '.9em', md: '1em'}}>Email address</FormLabel>
+                                <Input name='email' type='email' fontFamily={inputFont} fontWeight='400'/>
+                            </FormControl>
 
-                        <FormControl id='name' isRequired mb='.5em'> 
-                            <FormLabel fontFamily={labelFont} fontSize={{sm: '1em', sm_md: '.9em', md: '1em'}}>Name</FormLabel>
-                            <Input fontFamily={inputFont}/>
-                        </FormControl>
+                            <FormControl id='name' isRequired mb='.5em'> 
+                                <FormLabel fontFamily={labelFont} fontSize={{sm: '1em', sm_md: '.9em', md: '1em'}}>Name</FormLabel>
+                                <Input name='name' fontFamily={inputFont}/>
+                            </FormControl>
 
-                        <FormControl id='message' isRequired mb='.5em'>
-                            <FormLabel fontFamily={labelFont} fontSize={{sm: '1em', sm_md: '.9em', md: '1em'}}>Message</FormLabel>
-                            <Textarea fontFamily={inputFont} rows='10' resize='none'/>
-                        </FormControl>
+                            <FormControl id='message' isRequired mb='.5em'>
+                                <FormLabel fontFamily={labelFont} fontSize={{sm: '1em', sm_md: '.9em', md: '1em'}}>Message</FormLabel>
+                                <Textarea name='message' fontFamily={inputFont} rows='10' resize='none'/>
+                            </FormControl>
 
-                        <Button colorScheme='blue' mt='1em' type='submit' fontFamily='DM Sans, sans-serif;' fontSize={{sm: '1em', sm_md: '.9em', md: '1em'}} fontWeight='500' _focus={{}}>Send message</Button>
-
+                            <Button colorScheme='blue' mt='1em' type='submit' fontFamily='DM Sans, sans-serif;' fontSize={{sm: '1em', sm_md: '.9em', md: '1em'}} 
+                                    fontWeight='500' _focus={{}} onClick={sendAnEmail}>Send message</Button>
+                        </form>
                     </Container>
                 </Flex>
 
