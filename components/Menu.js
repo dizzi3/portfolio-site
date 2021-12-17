@@ -1,8 +1,8 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Box } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import StyledLink from './StyledLink'
 
-function Menu({ direction, display }){
+function Menu({ direction, display, setContactFormDisplay }){
 
     return(
         <Flex direction={direction} display={display} mt={{sm: '5em', md: 0}} gridGap='1em'>
@@ -11,7 +11,7 @@ function Menu({ direction, display }){
 
                 <StyledLink href='#projects'>Works</StyledLink>
 
-                <StyledLink href='/Contact'>Contact</StyledLink>
+                <StyledLink><Box onClick={() => setContactFormDisplay('block')}>Contact</Box></StyledLink>
 
         </Flex>
     )

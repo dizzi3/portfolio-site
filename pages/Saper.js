@@ -1,22 +1,25 @@
 import { Container, Flex, useColorModeValue, useColorMode, Image, Spacer, IconButton, Heading, Text, UnorderedList, ListItem, Button, VStack, Icon, Box } from '@chakra-ui/react'
-import { MoonIcon } from '@chakra-ui/icons'
 import { FaGithub } from 'react-icons/fa'
-import NextLink from 'next/link'
 import Project from '../components/Project'
 import Footer from '../components/Footer'
-import Logo from '../components/Logo'
 import ProjectNavbar from '../components/ProjectNavbar'
+import { useState } from 'react'
+import ContactForm from '../components/ContactForm'
 
 function Chatty(){
 
     const { colorMode, toggleColorMode } = useColorMode()
+    const [ contactFormDisplay, setContactFormDisplay ] = useState('none')
 
     return(
         
-        <Container w='100%' maxW='100%' p={0} id='home'>
+        <Container w='100%' maxW='100%' p={0} id='home' position='relative'>
+
+            <ContactForm displayProp={contactFormDisplay} setDisplayState={setContactFormDisplay}/>
+
             <Container w='100%' maxW='50%' pt='8em' pb='7em' color={useColorModeValue('#000', '#fff')}>
 
-                    <ProjectNavbar/>
+                    <ProjectNavbar setContactFormDisplay={setContactFormDisplay}/>
 
                     <Image src='/img/Saper.png' w='100%' />
 

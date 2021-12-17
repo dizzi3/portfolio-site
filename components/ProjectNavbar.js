@@ -1,9 +1,9 @@
-import { Container, Flex, Spacer, IconButton, useColorModeValue, useColorMode, VStack } from '@chakra-ui/react'
+import { Container, Flex, Spacer, IconButton, useColorModeValue, useColorMode, VStack, Box } from '@chakra-ui/react'
 import { MoonIcon } from '@chakra-ui/icons'
 import StyledLink from './StyledLink'
 import Logo from './Logo'
 
-function ProjectNavbar(){
+function ProjectNavbar({setContactFormDisplay}){
 
     const { colorMode, toggleColorMode } = useColorMode()
 
@@ -14,7 +14,7 @@ function ProjectNavbar(){
                             <Spacer/>
                             <Flex display={{ sm: 'none', md: 'flex'}}>
                                 <StyledLink href='/'>Home</StyledLink>
-                                <StyledLink href='/Contact'>Contact</StyledLink>
+                                <StyledLink><Box onClick={() => setContactFormDisplay(true)}>Contact</Box></StyledLink>
                             </Flex>
                             <IconButton _focus={{}} aria-label='Toggle night mode' icon={<MoonIcon/>}
                                         colorScheme={useColorModeValue('red', 'blue')} onClick={toggleColorMode} ml='2em'/>
@@ -22,7 +22,7 @@ function ProjectNavbar(){
 
             <VStack pb='5em' spacing='1em' display={{sm: 'flex', md: 'none'}}>
                 <StyledLink href='/'>Home</StyledLink>
-                <StyledLink href='/Contact'>Contact</StyledLink>
+                <StyledLink><Box onClick={() => setContactFormDisplay(true)}>Contact</Box></StyledLink>
             </VStack>
         </Container>
     )
