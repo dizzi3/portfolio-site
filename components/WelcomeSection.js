@@ -6,6 +6,8 @@ import { FaGithub } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import Menu from './Menu';
 import Logo from './Logo';
+import DropdownName from './TextAnimations/DropdownName';
+import AppearingDescription from './TextAnimations/AppearingDescription';
 
 function WelcomeSection(){
 
@@ -36,8 +38,8 @@ function WelcomeSection(){
 
                 <Flex direction={{sm:'column', md: 'column', lg: 'row',}} pt={{ sm: '6em', md: '15em' }}>
                     <VStack align='left' spacing='.8rem' w='fit-content'>
-                        <Heading mb={{sm: '.1em', md: 0}} as='u' fontSize={{sm: '2.5rem', md: '3.5rem'}} textUnderlineOffset='.1em' fontFamily='Ubuntu, sans-serif;' fontWeight='500' letterSpacing={{sm: '.1em', md: '.15em'}}>Michał Zapała</Heading>
-                        <Heading as='h2' fontSize={{sm: '1.4rem', md: '2.2rem'}} fontFamily='Ubuntu, sans-serif;' fontWeight='400'>Web Developer =)</Heading>
+                        <DropdownName/>
+                        <AppearingDescription/>
                         <Button colorScheme={useColorModeValue('red', 'blue')} maxW={{sm: '7em', md: '10em'}} fontFamily='DM Sans, sans-serif;' fontWeight='500' fontSize='1.1em' 
                                 color={useColorModeValue('#000', '#000')} _focus={{}} onClick={() => setContactFormDisplay('block')}>About Me</Button>
                     </VStack>
