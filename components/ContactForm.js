@@ -52,14 +52,16 @@ export function ContactForm({displayProp, setDisplayState}){
 
         <AnimatePresence initial={false}>
             <MotionFlex maxW='100%' w={{sm: '65%', sm_md: '50%' }} h='fit-content' display={displayProp} position='absolute' left='50%' top='0'
-                transform={{sm: 'translate(-50%, 5%)', md: 'translate(-50%, 10%)', lg: 'translate(-50%, 20%)'}} zIndex='99' bg='#373737' initial={displayProp === 'block' ? 'hidden' : 'visible'} color='#000'
+                transform={{sm: 'translate(-50%, 5%)', md: 'translate(-50%, 10%)', lg: 'translate(-50%, 20%)'}} 
+                zIndex='99' bg='#373737' initial={displayProp === 'block' ? 'hidden' : 'visible'} color='#000'
                 variants={animationVariants} animate={displayProp === 'block' ? 'visible' : 'hidden'} transition={{duration: 1}}
                 boxShadow='10px 10px 30px 0px rgba(0,0,0, .3)'>
 
                 <Flex h='100%' flexDirection={{sm: 'column', sm_md: 'row'}}>
                     <Container maxW='100%' w='100%' maxH='100%' minH='100%' bg='#ebebeb' p='2em'>
 
-                        <MotionBox w='1.5em' h='1.5em' float='right' whileHover={{ rotate: 90 }} transition={{duration: .25}} display={{sm: 'inline', sm_md: 'none'}}><Icon as={CgClose} w='100%' h='100%'
+                        <MotionBox w='1.5em' h='1.5em' float='right' whileHover={{ rotate: 90 }} transition={{duration: .25}} 
+                                    display={{sm: 'inline', sm_md: 'none'}}><Icon as={CgClose} w='100%' h='100%'
                                     _hover={{ cursor:'pointer', color:'#8083FF'}} onClick={closeForm}/></MotionBox>
 
                         <Heading as='h4' fontFamily='Readex Pro' fontWeight='500' mb='.5em' fontSize={{sm: '2.2em', sm_md: '1.8em', md: '2.4em'}}>About me</Heading>
