@@ -12,7 +12,8 @@ function FlexDropdown(props){
 
         <MotionFlex animate={{ top: 0, transitionEnd: {position: 'static'} }} 
                     initial={{ position: animationFinished ? 'static' : 'relative', top: animationFinished ? 0 : props.distance }} 
-                    transition={{ duration: props.duration }} onAnimationComplete={() => { setAnimationFinished(true) }}>
+                    transition={{ duration: props.duration }} onAnimationComplete={() => { setAnimationFinished(true) }}
+                    direction={props.direction} alignItems={props.alignItems}>
             {props.children}
         </MotionFlex>
 

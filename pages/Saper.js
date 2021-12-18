@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import ProjectNavbar from '../components/ProjectNavbar'
 import { useState } from 'react'
 import ContactForm from '../components/ContactForm'
+import SlideBox from '../components/AnimationComponents/SlideBox'
 
 function Chatty(){
 
@@ -58,8 +59,8 @@ function Chatty(){
             <Container bg={useColorModeValue('#000', 'bgWhite')} p='3em 0' maxW='100%' color='#000' w='100%'>
                 <Container maxW='90%' p={0} centerContent>
                     <Heading as='h2' w='fit-content' mb='.4em' color={useColorModeValue('#fff', '#000')} fontFamily='Ubuntu, sans-serif;' fontSize='2em' fontWeight='700'>Check out my other projects!</Heading>
-                    <Project name='Chatty' description='An app allowing users to chat in real-time' img='/img/Chatty-transparent.png' subpage='Chatty'/>
-                    <Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png' subpage='Exoplanets'/>
+                    <SlideBox><Project name='Chatty' description='An app allowing users to chat in real-time' img='/img/Chatty-transparent.png' subpage='Chatty'/></SlideBox>
+                    <SlideBox><Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png' subpage='Exoplanets'/></SlideBox>
                 </Container>
             </Container>
 

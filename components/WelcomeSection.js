@@ -21,7 +21,7 @@ function WelcomeSection(){
     return (
 
         <Container maxW='100%' w='100%'>
-            <Container maxW='50%' pt={{sm: '4em', md: '8em'}} pb={{sm: '8em', md: '24em'}} color={useColorModeValue('#000', '#fff')} id='home' position='relative'>
+            <Container maxW={{sm: '100%', md: '50%'}} pt={{sm: '4em', md: '8em'}} pb={{sm: '8em', md: '24em'}} color={useColorModeValue('#000', '#fff')} id='home' position='relative'>
                 
                 <FlexDropdown duration={2} distance='-150px' direction={{sm: 'column', md: 'row'}} alignItems='center'>
 
