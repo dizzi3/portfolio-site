@@ -8,6 +8,8 @@ import Menu from './Menu';
 import Logo from './Logo';
 import DropdownName from './TextAnimations/DropdownName';
 import AppearingDescription from './TextAnimations/AppearingDescription';
+import FlexAppear from './AnimationComponents/FlexAppear';
+import FlexDropdown from './AnimationComponents/FlexDropdown';
 
 function WelcomeSection(){
 
@@ -21,7 +23,7 @@ function WelcomeSection(){
         <Container maxW='100%' w='100%'>
             <Container maxW='50%' pt={{sm: '4em', md: '8em'}} pb={{sm: '8em', md: '24em'}} color={useColorModeValue('#000', '#fff')} id='home' position='relative'>
                 
-                <Flex direction={{sm: 'column', md: 'row'}} alignItems='center'>
+                <FlexDropdown duration={2} distance='-150px' direction={{sm: 'column', md: 'row'}} alignItems='center'>
 
                     <Flex w='100%' alignItems='center'>
                         <a href='#home'><Logo smallDimensions='3em' mediumDimensions='4.5em' colorMode={colorMode}/></a>
@@ -34,24 +36,24 @@ function WelcomeSection(){
                     
                     <Menu direction='column' display={{ sm: 'flex', md: 'none'}} setContactFormDisplay={setContactFormDisplay}/>
 
-                </Flex>
+                </FlexDropdown>
 
                 <Flex direction={{sm:'column', md: 'column', lg: 'row',}} pt={{ sm: '6em', md: '15em' }}>
                     <VStack align='left' spacing='.8rem' w='fit-content'>
                         <DropdownName/>
                         <AppearingDescription/>
-                        <Button colorScheme={useColorModeValue('red', 'blue')} maxW={{sm: '7em', md: '10em'}} fontFamily='DM Sans, sans-serif;' fontWeight='500' fontSize='1.1em' 
-                                color={useColorModeValue('#000', '#000')} _focus={{}} onClick={() => setContactFormDisplay('block')}>About Me</Button>
+                        <FlexAppear duration={3}><Button colorScheme={useColorModeValue('red', 'blue')} maxW={{sm: '7em', md: '10em'}} fontFamily='DM Sans, sans-serif;' fontWeight='500' fontSize='1.1em' 
+                                color={useColorModeValue('#000', '#000')} _focus={{}} onClick={() => setContactFormDisplay('block')}>About Me</Button></FlexAppear>
                     </VStack>
 
                     <Spacer/>
                     
                     <Center>
                         <a href='https://github.com/dizzi3' target='_blank'>
-                            <MotionBox whileHover={{ scale: [1, 1.12, 1] }} transition={{ duration: .8, type: 'spring', bounce: .7 }}>
-                                <Icon as={FaGithub} w='8em' h='8em' _hover={{ color: useColorModeValue('reddish', 'blueish'), cursor: 'pointer' }}
+                            <FlexAppear duration={3}><MotionBox whileHover={{ scale: [1, 1.12, 1] }} transition={{ duration: .8, type: 'spring', bounce: .7 }}>
+                                 <Icon as={FaGithub} w='8em' h='8em' _hover={{ color: useColorModeValue('reddish', 'blueish'), cursor: 'pointer' }}
                                         mt={{sm: '6em', md:'8em', lg: 0}} />
-                                </MotionBox>
+                                </MotionBox></FlexAppear>
                         </a>
                     </Center>
 
