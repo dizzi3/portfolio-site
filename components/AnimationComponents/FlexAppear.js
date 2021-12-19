@@ -11,7 +11,8 @@ function FlexAppear(props){
 
     return(
 
-        <MotionFlex animate={{ opacity: 1 }} initial={{ opacity: animationFinished ? 1 : 0 }} transition={{ duration: props.duration }}
+        <MotionFlex animate={{ opacity: 1 }} initial={{ opacity: animationFinished ? 1 : 0 }}
+                    transition={{ duration: props.duration, delay: props.delay }}
                     onAnimationComplete={() => { setAnimationFinished(true) }}>
             {props.children}
         </MotionFlex>

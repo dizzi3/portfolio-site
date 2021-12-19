@@ -40,9 +40,9 @@ function WelcomeSection(){
 
                 <Flex direction={{sm:'column', md: 'column', lg: 'row',}} pt={{ sm: '6em', md: '15em' }}>
                     <VStack align='left' spacing='.8rem' w='fit-content'>
-                        <DropdownName/>
-                        <AppearingDescription/>
-                        <FlexAppear duration={3}><Button colorScheme={useColorModeValue('red', 'blue')} maxW={{sm: '7em', md: '10em'}} fontFamily='DM Sans, sans-serif;' fontWeight='500' fontSize='1.1em' 
+                        <DropdownName delay={2.2}/>
+                        <AppearingDescription delay={3.5}/>
+                        <FlexAppear duration={3} delay={7.5}><Button colorScheme={useColorModeValue('red', 'blue')} maxW={{sm: '7em', md: '10em'}} fontFamily='DM Sans, sans-serif;' fontWeight='500' fontSize='1.1em' 
                                 color={useColorModeValue('#000', '#000')} _focus={{}} onClick={() => setContactFormDisplay('block')}>About Me</Button></FlexAppear>
                     </VStack>
 
@@ -50,7 +50,7 @@ function WelcomeSection(){
                     
                     <Center>
                         <a href='https://github.com/dizzi3' target='_blank'>
-                            <FlexAppear duration={3}><MotionBox whileHover={{ scale: [1, 1.12, 1] }} transition={{ duration: .8, type: 'spring', bounce: .7 }}>
+                            <FlexAppear duration={3} delay={7.5}><MotionBox whileHover={{ scale: [1, 1.12, 1] }} transition={{ duration: .8, type: 'spring', bounce: .7 }}>
                                  <Icon as={FaGithub} w='8em' h='8em' _hover={{ color: useColorModeValue('reddish', 'blueish'), cursor: 'pointer' }}
                                         mt={{sm: '6em', md:'8em', lg: 0}} />
                                 </MotionBox></FlexAppear>

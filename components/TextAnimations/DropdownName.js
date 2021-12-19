@@ -33,7 +33,7 @@ function DropdownName(props){
 
         return (
             <MB display='inline' initial={animationFinished ? false : {position: 'relative', top: '-450px'}} animate={{top: 0, transitionEnd: {position: 'static'}}} 
-                            transition={{duration: props.duration}} onAnimationComplete={ () => { if(typeof props.onAnimationFinished === 'function') props.onAnimationFinished(); }}>
+                            transition={{duration: props.duration, delay: props.delay}} onAnimationComplete={ () => { if(typeof props.onAnimationFinished === 'function') props.onAnimationFinished(); }}>
                 {props.children}
             </MB>
         )
@@ -45,19 +45,19 @@ function DropdownName(props){
 
     }else{
         return(
-            <MotionBox>
-                <MotionBox duration={1}><MotionHeading {...props}>M</MotionHeading></MotionBox>
-                <MotionBox duration={1.1}><MotionHeading {...props}>i</MotionHeading></MotionBox>
-                <MotionBox duration={1.2}><MotionHeading {...props}>c</MotionHeading></MotionBox>
-                <MotionBox duration={1.3}><MotionHeading {...props}>h</MotionHeading></MotionBox>
-                <MotionBox duration={1.4}><MotionHeading {...props}>a</MotionHeading></MotionBox>
-                <MotionBox duration={1.5}><MotionHeading {...props}>ł </MotionHeading></MotionBox>
-                <MotionBox duration={1.6}><MotionHeading {...props}>Z</MotionHeading></MotionBox>
-                <MotionBox duration={1.7}><MotionHeading {...props}>a</MotionHeading></MotionBox>
-                <MotionBox duration={1.8}><MotionHeading {...props}>p</MotionHeading></MotionBox>
-                <MotionBox duration={1.9}><MotionHeading {...props}>a</MotionHeading></MotionBox>
-                <MotionBox duration={2}><MotionHeading {...props}>ł</MotionHeading></MotionBox>
-                <MotionBox duration={2.1} onAnimationFinished={() => setAnimationFinished(true)}><MotionHeading {...props}>a</MotionHeading></MotionBox>
+            <MotionBox {...props}>
+                <MotionBox {...props} duration={1} ><MotionHeading {...props}>M</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.1}><MotionHeading {...props}>i</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.2}><MotionHeading {...props}>c</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.3}><MotionHeading {...props}>h</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.4}><MotionHeading {...props}>a</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.5}><MotionHeading {...props}>ł </MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.6}><MotionHeading {...props}>Z</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.7}><MotionHeading {...props}>a</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.8}><MotionHeading {...props}>p</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={1.9}><MotionHeading {...props}>a</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={2}><MotionHeading {...props}>ł</MotionHeading></MotionBox>
+                <MotionBox {...props} duration={2.1} onAnimationFinished={() => setAnimationFinished(true)}><MotionHeading {...props}>a</MotionHeading></MotionBox>
             </MotionBox>        
         )
     }
