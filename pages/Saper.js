@@ -4,7 +4,7 @@ import Project from '../components/Project'
 import Footer from '../components/Footer'
 import ProjectNavbar from '../components/ProjectNavbar'
 import { useState } from 'react'
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/ContactForm/ContactForm'
 import SlideBox from '../components/AnimationComponents/SlideBox'
 
 function Chatty(){
@@ -17,7 +17,7 @@ function Chatty(){
 
             <ContactForm displayProp={contactFormDisplay} setDisplayState={setContactFormDisplay}/>
 
-            <Container w='100%' maxW='50%' pt='8em' pb='7em' color={useColorModeValue('#000', '#fff')}>
+            <Container w='100%' maxW={{sm: '100%', md: '50%'}} pt='8em' pb='7em' color={useColorModeValue('#000', '#fff')}>
 
                     <ProjectNavbar setContactFormDisplay={setContactFormDisplay}/>
 

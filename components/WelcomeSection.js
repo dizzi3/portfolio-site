@@ -1,4 +1,4 @@
-import ContactForm from './ContactForm';
+import ContactForm from './ContactForm/ContactForm';
 import { Container, Flex, Spacer, IconButton, VStack, Heading, Button, Box, useColorMode, useColorModeValue, Center, Icon } from '@chakra-ui/react'
 import { MoonIcon } from '@chakra-ui/icons'
 import { useState } from 'react';
@@ -62,6 +62,7 @@ function WelcomeSection(){
             </Container>
 
             <ContactForm displayProp={contactFormDisplay} setDisplayState={setContactFormDisplay}/>
+            
         </Container>
 
     )
