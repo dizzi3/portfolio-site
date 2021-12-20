@@ -46,7 +46,7 @@ function Sidebar(props){
                 <VStack>
                     <a href='/'><Link py={3}>Home</Link></a>
                     <a href='#projects'><Link py={3}>Works</Link></a>
-                    <Link onClick={() => { props.setContactFormDisplay('block') }}>Contact</Link>
+                    <Link onClick={() => { props.setDisplay('none'); props.setContactFormDisplay('block') }}>Contact</Link>
                 </VStack>
 
         </MotionFlex>

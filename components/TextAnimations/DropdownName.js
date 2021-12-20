@@ -6,25 +6,17 @@ function DropdownName(props){
 
     const [animationFinished, setAnimationFinished] = useState(false)
 
+    let currentTransitionDuration = 1
+    const delayForNextTransition = .1
+
+    var elements = new Array()
+
     const MotionHeading = (props) => {
         return(
             <Heading mb={{sm: '.1em', md: 0}} fontSize={{sm: '2.5rem', md: '3.5rem'}} textUnderlineOffset='.1em' fontFamily='Ubuntu, sans-serif;'
                     fontWeight='500' letterSpacing={{sm: '.1em', md: '.15em'}} display='inline'>
                 {props.children}
             </Heading>
-        )
-    }
-
-    const UnderlineHeading = (props) => {
-
-        const MotionHeading = motion(Heading)
-
-        return (
-
-            <MotionHeading animate={{opacity: 1}} initial={{opacity: 0}} as='u' mb={{sm: '.1em', md: 0}} transition={{duration: 2.5}} fontSize={{sm: '2.5rem', md: '3.5rem'}} textUnderlineOffset='.1em' fontFamily='Ubuntu, sans-serif;'
-                            fontWeight='500' letterSpacing={{sm: '.1em', md: '.15em'}} display='inline' position='absolute'>
-                {props.children}
-            </MotionHeading>
         )
     }
 
@@ -39,25 +31,44 @@ function DropdownName(props){
         )
     }
 
+    for(var i = 0; i < (props.children).length; i++){
+
+        const heading = React.createElement(MotionHeading, props, (props.children).charAt(i));
+
+        var box;
+        if(i + 1 == (props.children).length)
+            box = React.createElement(MotionBox, {delay: props.delay, duration: currentTransitionDuration, onAnimationFinished: () => setAnimationFinished(true)}, heading);
+        else 
+            box = React.createElement(MotionBox, {delay: props.delay, duration: currentTransitionDuration}, heading);
+
+        elements.push(box);
+
+        currentTransitionDuration += delayForNextTransition;
+    }
+
+    
+
+    const UnderlineHeading = (props) => {
+
+        const MotionHeading = motion(Heading)
+
+        return (
+
+            <MotionHeading animate={{opacity: 1}} initial={{opacity: 0}} as='u' mb={{sm: '.1em', md: 0}} transition={{duration: 2.5}} fontSize={{sm: '2.5rem', md: '3.5rem'}} textUnderlineOffset='.1em' fontFamily='Ubuntu, sans-serif;'
+                            fontWeight='500' letterSpacing={{sm: '.1em', md: '.15em'}} display='inline' position='absolute'>
+                {props.children}
+            </MotionHeading>
+        )
+    }
+
     if(animationFinished){
 
-        return <><MotionHeading><UnderlineHeading>Michał Zapała</UnderlineHeading>Michał Zapała</MotionHeading></>
+        return <><MotionHeading><UnderlineHeading>{props.children}</UnderlineHeading>{props.children}</MotionHeading></>
 
     }else{
         return(
             <MotionBox {...props}>
-                <MotionBox {...props} duration={1} ><MotionHeading {...props}>M</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.1}><MotionHeading {...props}>i</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.2}><MotionHeading {...props}>c</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.3}><MotionHeading {...props}>h</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.4}><MotionHeading {...props}>a</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.5}><MotionHeading {...props}>ł </MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.6}><MotionHeading {...props}>Z</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.7}><MotionHeading {...props}>a</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.8}><MotionHeading {...props}>p</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={1.9}><MotionHeading {...props}>a</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={2}><MotionHeading {...props}>ł</MotionHeading></MotionBox>
-                <MotionBox {...props} duration={2.1} onAnimationFinished={() => setAnimationFinished(true)}><MotionHeading {...props}>a</MotionHeading></MotionBox>
+                {elements}
             </MotionBox>        
         )
     }

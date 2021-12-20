@@ -11,10 +11,9 @@ function SlideBox(props){
 
     return(
 
-        <MotionBox initial={{ opacity: animationFinished ? 1 : 0, position: animationFinished ? 'static' : 'absolute', 
-                            transform: animationFinished ? '' : 'translate(-50%, 0%)', left: '0%' }}
+        <MotionBox initial={{ opacity: animationFinished ? 1 : 0, x: animationFinished ? 0 : '-400px' }} 
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1.5 }} w='100%' minW='100%'
-                    whileInView={{ opacity: 1, position: 'static', transform:'translate(0%,0%)' }}
                     onAnimationComplete={() => setAnimationFinished(true) }>
             {props.children}
         </MotionBox>

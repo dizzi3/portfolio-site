@@ -44,8 +44,8 @@ function WelcomeSection(){
 
                 <Flex direction={{sm:'column', md: 'column', lg: 'row',}} pt={{ sm: '6em', md: '15em' }}>
                     <VStack align='left' spacing='.8rem' w='fit-content'>
-                        <DropdownName delay={1.5}/>
-                        <AppearingDescription delay={2.8}/>
+                        <DropdownName delay={1.5}>Michał Zapała</DropdownName>
+                        <AppearingDescription delay={2.8}>Web Developer =)</AppearingDescription>
                         <FlexAppear duration={3} delay={6.8}><Button colorScheme={useColorModeValue('red', 'blue')} maxW={{sm: '7em', md: '10em'}} fontFamily='DM Sans, sans-serif;' fontWeight='500' fontSize='1.1em' 
                                 color={useColorModeValue('#000', '#000')} _focus={{}} onClick={() => setContactFormDisplay('block')}>About Me</Button></FlexAppear>
                     </VStack>
