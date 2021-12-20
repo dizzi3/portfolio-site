@@ -54,8 +54,8 @@ export function ContactForm({displayProp, setDisplayState}){
     return(
 
         <AnimatePresence initial={false} key='FormAnimatePresence'>
-            <MotionFlex maxW='100%' w={{sm: '65%', sm_md: '50%' }} h='fit-content' display={displayProp} position='absolute' left='50%' top='0'
-                transform={{sm: 'translate(-50%, 5%)', md: 'translate(-50%, 10%)', lg: 'translate(-50%, 20%)'}} 
+            <MotionFlex maxW='100%' w={{sm: '100%', sm_md: '50%' }} h='fit-content' display={displayProp} position='absolute' left='50%' top='0'
+                transform={{sm: 'translate(-50%, 0%)', md: 'translate(-50%, 10%)', lg: 'translate(-50%, 20%)'}} 
                 zIndex='99' bg='#373737' color='#000' variants={animationVariants}
                 initial={(displayProp === 'block' ? 'hidden' : 'visible')} 
                 animate={(displayProp === 'block' ? 'visible' : 'hidden')} transition={{duration: 1}}
