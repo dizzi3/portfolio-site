@@ -20,6 +20,21 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
+    "/Chatty": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Chatty.js"
+    ],
+    "/Exoplanets": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Exoplanets.js"
+    ],
+    "/Saper": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Saper.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

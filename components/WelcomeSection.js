@@ -23,7 +23,7 @@ function WelcomeSection(){
     return (
 
         <Container maxW='100%' w='100%'>
-            <Container maxW={{sm: '100%', md: '50%'}} pt={{sm: '4em', md: '8em'}} pb={{sm: '8em', md: '24em'}} color={useColorModeValue('#000', '#fff')} id='home' position='relative'>
+            <Container maxW={{sm: '100%', md: '50%'}} pt={{sm: '4em', md: '8em'}} pb={{sm: '9em', md: '24em'}} color={useColorModeValue('#000', '#fff')} id='home' position='relative'>
                 
                 <Sidebar display={sidebarMenuDisplay} setDisplay={setSidebarMenuDisplay} setContactFormDisplay={setContactFormDisplay}/>
 
