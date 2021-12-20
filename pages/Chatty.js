@@ -9,10 +9,14 @@ import ProjectNavbar from '../components/ProjectNavbar'
 import { useState } from 'react'
 import ContactForm from '../components/ContactForm/ContactForm'
 import SlideBox from '../components/AnimationComponents/SlideBox'
+import StyledLink from '../components/StyledLink'
 
 function Chatty(){
 
     const [ contactFormDisplay, setContactFormDisplay ] = useState('none')
+    
+    const modulesColorLight = '#ff7700';
+    const modulesColorDark = '#fff94d';
 
     return(
         
@@ -20,7 +24,7 @@ function Chatty(){
 
             <ContactForm displayProp={contactFormDisplay} setDisplayState={setContactFormDisplay}/>
 
-            <Container w='100%' maxW={{sm: '100%', md: '50%'}} pt='8em' pb='7em' color={useColorModeValue('#000', '#fff')}>
+            <Container w='100%' maxW={{sm: '100%', md: '50%'}} pt={{sm: '2.5em', md:'8em'}} pb={{sm: '4em', md: '7em'}} color={useColorModeValue('#000', '#fff')}>
 
                     <ProjectNavbar setContactFormDisplay={setContactFormDisplay}/>
 
@@ -33,11 +37,30 @@ function Chatty(){
                     </Text>
 
                     <Text fontFamily='Ubuntu, sans-serif;' fontSize='1.2em' mt='2.5em' mb='4em'>
-                        <Box fontSize='1.1em' fontWeight='400' fontFamily='DM Sans, sans-serif;'>Technologies used:</Box>
-                        <UnorderedList>
-                            <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>React</Box></ListItem>
-                            <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>Mongodb (mongoose)</Box></ListItem>
-                            <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>Socket.io</Box></ListItem>
+                        <Box fontSize='1.15em' fontWeight='400' fontFamily='DM Sans, sans-serif;'>Technologies used:</Box>
+                        <UnorderedList fontSize='1.05em'>
+                            <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>React<br/>
+                            <Box fontSize='.9em'>Modules:</Box>
+                    
+                                <UnorderedList>
+                                    <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
+                                        <a href='https://www.npmjs.com/package/body-parser' target='_blank'><StyledLink fontSize='1em' padding={0}>Body-parser</StyledLink></a>
+                                    </ListItem>
+                                    <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
+                                        <a href='https://www.npmjs.com/package/cors' target='_blank'><StyledLink fontSize='1em' padding={0}>Cors</StyledLink></a>
+                                    </ListItem>
+                                    <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
+                                        <a href='https://www.npmjs.com/package/mongoose' target='_blank'><StyledLink fontSize='1em' padding={0}>Mongoose</StyledLink></a>
+                                    </ListItem>
+                                    <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
+                                        <a href='https://www.npmjs.com/package/node-fetch' target='_blank'><StyledLink fontSize='1em' padding={0}>Node-fetch</StyledLink></a>
+                                    </ListItem>
+                                    <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
+                                        <a href='https://www.npmjs.com/package/socket.io' target='_blank'><StyledLink fontSize='1em' padding={0}>Socket.io</StyledLink></a>
+                                    </ListItem>
+                                </UnorderedList>
+                            
+                            </Box></ListItem>
                             <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>Languages: 
                                 <Text color={useColorModeValue('#ff7700' ,'#fff94d')} display='inline'> Javascript</Text>,
                                 <Text color={useColorModeValue('#ae00ff', '#E33B44')} display='inline'> HTML</Text>, 

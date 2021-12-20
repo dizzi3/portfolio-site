@@ -12,7 +12,7 @@ function ProjectNavbar({setContactFormDisplay}){
     const [ sidebarMenuDisplay, setSidebarMenuDisplay ] = useState('none')
 
     return (
-        <Container minW='100%'>
+        <Container minW='100%' m={0} p={0}>
             <Sidebar display={sidebarMenuDisplay} setDisplay={setSidebarMenuDisplay} setContactFormDisplay={setContactFormDisplay} projectPage={true}/>
 
             <Flex alignItems='center' mb={{sm: '3em', md: '7em'}}>

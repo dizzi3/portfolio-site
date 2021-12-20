@@ -17,7 +17,7 @@ function Chatty(){
 
             <ContactForm displayProp={contactFormDisplay} setDisplayState={setContactFormDisplay}/>
 
-            <Container w='100%' maxW={{sm: '100%', md: '50%'}} pt='8em' pb='7em' color={useColorModeValue('#000', '#fff')}>
+            <Container w='100%' maxW={{sm: '100%', md: '50%'}} pt={{sm: '2.5em', md:'8em'}} pb={{sm: '4em', md: '7em'}} color={useColorModeValue('#000', '#fff')}>
 
                     <ProjectNavbar setContactFormDisplay={setContactFormDisplay}/>
 

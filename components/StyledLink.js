@@ -1,12 +1,12 @@
 import { useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
-function StyledLink({children, href, target, marginBottom}){
+function StyledLink({children, href, target, marginBottom, fontSize='1.5em', padding='.5em'}){
 
     const Link = styled.a`
         color: ${useColorModeValue('#000', '#f8f8f8')};
-        padding: 0 .5em;
-        font-size: 1.5rem;
+        padding: 0 ${padding};
+        font-size: ${fontSize};
         font-family: Ubuntu, sans-serif;
         font-weight: 500;
         position: relative;
