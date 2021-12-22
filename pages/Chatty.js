@@ -44,19 +44,19 @@ function Chatty(){
                     
                                 <UnorderedList>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/body-parser' target='_blank'><StyledLink fontSize='1em' padding={0}>Body-parser</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/body-parser' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Body-parser</StyledLink></a>
                                     </ListItem>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/cors' target='_blank'><StyledLink fontSize='1em' padding={0}>Cors</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/cors' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Cors</StyledLink></a>
                                     </ListItem>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/mongoose' target='_blank'><StyledLink fontSize='1em' padding={0}>Mongoose</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/mongoose' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Mongoose</StyledLink></a>
                                     </ListItem>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/node-fetch' target='_blank'><StyledLink fontSize='1em' padding={0}>Node-fetch</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/node-fetch' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Node-fetch</StyledLink></a>
                                     </ListItem>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/socket.io' target='_blank'><StyledLink fontSize='1em' padding={0}>Socket.io</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/socket.io' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Socket.io</StyledLink></a>
                                     </ListItem>
                                 </UnorderedList>
                             

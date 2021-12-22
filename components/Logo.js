@@ -1,7 +1,7 @@
 import { Image, useColorModeValue } from '@chakra-ui/react'
 import { useEffect, useState } from 'react';
 
-function Logo({ smallDimensions, mediumDimensions, colorMode }){
+function Logo({ smallDimensions = '60px', mediumDimensions = '70px', colorMode }){
 
     const logoImg = '/img/logo' + useColorModeValue('', '-dark') + '.svg';
     const logoImgHover = '/img/logo' + useColorModeValue('', '-dark') + '_hover.svg';

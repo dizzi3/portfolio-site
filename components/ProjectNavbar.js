@@ -18,7 +18,7 @@ function ProjectNavbar({setContactFormDisplay}){
             <Flex alignItems='center' mb={{sm: '3em', md: '7em'}}>
                     <IconButton _focus={{}} aria-label='Side menu' icon={<HamburgerIcon/>} colorScheme={useColorModeValue('red', 'blue')} mr='1em'
                                                 display={{sm: 'flex', md: 'none'}} onClick={() => setSidebarMenuDisplay('flex')}/>
-                    <a href='#home'><Logo smallDimensions='3em' mediumDimensions='4.5em' colorMode={colorMode}/></a>
+                    <a href='#home'><Logo colorMode={colorMode}/></a>
                     <Spacer/>
                     <Flex display={{ sm: 'none', md: 'flex'}}>
                         <StyledLink href='/'>Home</StyledLink>

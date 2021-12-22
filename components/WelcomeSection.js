@@ -32,7 +32,7 @@ function WelcomeSection(){
                     <Flex w='100%' alignItems='center'>
                         <IconButton _focus={{}} aria-label='Side menu' icon={<HamburgerIcon/>} colorScheme={useColorModeValue('red', 'blue')} mr='1em'
                                         display={{sm: 'flex', md: 'none'}} onClick={() => setSidebarMenuDisplay('flex')}/>
-                        <a href='#home'><Logo smallDimensions='3em' mediumDimensions='4.5em' colorMode={colorMode}/></a>
+                        <a href='#home'><Logo colorMode={colorMode}/></a>
                         <Spacer/>
                         <Flex>
                             <Menu direction='row' display={{ sm: 'none', md: 'flex'}} setContactFormDisplay={setContactFormDisplay}/>
