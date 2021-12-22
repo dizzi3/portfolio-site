@@ -1,10 +1,7 @@
 import { Container, Flex, useColorModeValue, useColorMode, Image, Spacer, IconButton, Heading, Text, UnorderedList, ListItem, Button, VStack, Icon, Box } from '@chakra-ui/react'
-import { MoonIcon } from '@chakra-ui/icons'
 import { FaGithub } from 'react-icons/fa'
-import NextLink from 'next/link'
 import Project from '../components/Project'
 import Footer from '../components/Footer'
-import Logo from '../components/Logo'
 import ProjectNavbar from '../components/ProjectNavbar'
 import { useState } from 'react'
 import ContactForm from '../components/ContactForm/ContactForm'
@@ -14,13 +11,13 @@ import StyledLink from '../components/StyledLink'
 function Chatty(){
 
     const [ contactFormDisplay, setContactFormDisplay ] = useState('none')
-    
+
     const modulesColorLight = '#ff7700';
     const modulesColorDark = '#fff94d';
 
     return(
         
-        <Container w='100%' maxW='100%' p={0} id='home'>
+        <Container w='100%' maxW='100%' p={0} id='home' position='relative'>
 
             <ContactForm displayProp={contactFormDisplay} setDisplayState={setContactFormDisplay}/>
 
@@ -28,12 +25,12 @@ function Chatty(){
 
                     <ProjectNavbar setContactFormDisplay={setContactFormDisplay}/>
 
-                    <Image src='/img/Chatty-fullsize.png' w='100%' border='1px solid #fff'/>
+                    <Image src='/img/Website.png' w='100%' />
 
                     <Text fontFamily='DM Sans, sans-serif;' fontSize='1.4em' mt='1.5em'
                         borderBottom={useColorModeValue('1px solid #000', '1px solid #fff')} pb='2.5em'>
-                        <Box color={useColorModeValue('reddish', 'blueish')} display='inline' fontFamily='Ubuntu, sans-serif;'><strong>Chatty</strong></Box> is a real-time chat interface where multiple users can interact with each 
-                        other by sending messages either in private or to group of users by joining a channel.
+                        <Box color={useColorModeValue('reddish', 'blueish')} display='inline' fontFamily='Ubuntu, sans-serif;'><strong>Portfolio Website </strong></Box> 
+                        is a static website made using Next.js
                     </Text>
 
                     <Text fontFamily='Ubuntu, sans-serif;' fontSize='1.2em' mt='2.5em' mb='4em'>
@@ -44,19 +41,19 @@ function Chatty(){
                     
                                 <UnorderedList>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/body-parser' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Body-parser</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/next' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>NextJS</StyledLink></a>
                                     </ListItem>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/cors' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Cors</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/@chakra-ui/react' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Chakra UI</StyledLink></a>
                                     </ListItem>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/mongoose' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Mongoose</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/emotion' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Emotion</StyledLink></a>
                                     </ListItem>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/node-fetch' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Node-fetch</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/emailjs-com' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>EmailJS</StyledLink></a>
                                     </ListItem>
                                     <ListItem color={useColorModeValue(modulesColorLight, modulesColorDark)} fontSize='.9em'>
-                                        <a href='https://www.npmjs.com/package/socket.io' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Socket.io</StyledLink></a>
+                                        <a href='https://www.npmjs.com/package/framer-motion' target='_blank'><StyledLink fontSize='1em' padding={0} underlineMargin='.3em'>Framer Motion</StyledLink></a>
                                     </ListItem>
                                 </UnorderedList>
                             
@@ -66,12 +63,19 @@ function Chatty(){
                                 <Text color={useColorModeValue('#ae00ff', '#E33B44')} display='inline'> HTML</Text>, 
                                 <Text color={useColorModeValue('#0073ff', '#8083FF')} display='inline'> CSS</Text>
                             </Box></ListItem>
+
+                            <ListItem color={useColorModeValue('reddish', 'blueish')}><Box color={useColorModeValue('black', 'white')}>Deployed via <StyledLink underlineMargin='.1em' fontSize='1em' padding='0' target='_blank' href='https://vercel.com/dizzi3/michal-zapala-website'>
+                                                    <Box display='inline' color={useColorModeValue('reddish', 'blueish')}>
+                                                        Vercel
+                                                    </Box></StyledLink>
+                            </Box></ListItem>
+
                         </UnorderedList>
                     </Text>
 
                     <VStack spacing='1em'>
 
-                        <a href='https://github.com/dizzi3/Chatty' target='_blank'>
+                        <a href='https://github.com/dizzi3/portfolio-site' target='_blank'>
                             <Button fontFamily='DM Sans, sans-serif;' fontSize='1em' colorScheme={useColorModeValue('red', 'blue')} 
                             _focus={{}} fontWeight='500'>
 
@@ -89,7 +93,7 @@ function Chatty(){
             <Container bg={useColorModeValue('#000', 'bgWhite')} p='3em 0' maxW='100%' color='#000' w='100%'>
                 <Container maxW='90%' p={0} centerContent>
                     <Heading as='h2' w='fit-content' mb='.4em' color={useColorModeValue('#fff', '#000')} fontFamily='Ubuntu, sans-serif;' fontSize='2em' fontWeight='700'>Check out my other projects!</Heading>
-                    <SlideBox><Project name='Portfolio Website' description='The site You&#39;re currently viewing ;)' img='/img/Website-transparent.png' subpage='Website'/></SlideBox>
+                    <SlideBox><Project name='Chatty' description='An app allowing users to chat in real-time' img='/img/Chatty-transparent.png' subpage='Chatty'/></SlideBox>
                     <SlideBox><Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png' subpage='Exoplanets'/></SlideBox>
                     <SlideBox><Project name='Saper' description='A minesweeping game' img='/img/Saper-transparent.png' subpage='Saper'/></SlideBox>
                 </Container>

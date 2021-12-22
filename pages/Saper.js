@@ -60,6 +60,7 @@ function Chatty(){
                 <Container maxW='90%' p={0} centerContent>
                     <Heading as='h2' w='fit-content' mb='.4em' color={useColorModeValue('#fff', '#000')} fontFamily='Ubuntu, sans-serif;' fontSize='2em' fontWeight='700'>Check out my other projects!</Heading>
                     <SlideBox><Project name='Chatty' description='An app allowing users to chat in real-time' img='/img/Chatty-transparent.png' subpage='Chatty'/></SlideBox>
+                    <SlideBox><Project name='Portfolio Website' description='The site You&#39;re currently viewing ;)' img='/img/Website-transparent.png' subpage='Website'/></SlideBox>
                     <SlideBox><Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png' subpage='Exoplanets'/></SlideBox>
                 </Container>
             </Container>
