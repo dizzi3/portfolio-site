@@ -89,7 +89,7 @@ function Chatty(){
             <Container bg={useColorModeValue('#000', 'bgWhite')} p='3em 0' maxW='100%' color='#000' w='100%'>
                 <Container maxW='90%' p={0} centerContent>
                     <Heading as='h2' w='fit-content' mb='.4em' color={useColorModeValue('#fff', '#000')} fontFamily='Ubuntu, sans-serif;' fontSize='2em' fontWeight='700'>Check out my other projects!</Heading>
-                    <SlideBox><Project name='Portfolio Website' description='The site You&#39;re currently viewing ;)' img='/img/Website-transparent.png' subpage='Website'/></SlideBox>
+                    <SlideBox><Project name='Portfolio Website' description='The site You&#39;re currently browsing ;)' img='/img/Website-transparent.png' subpage='Website'/></SlideBox>
                     <SlideBox><Project name='Exoplanets' description='Query for any discovered exoplanet' img='/img/Exo-transparent.png' subpage='Exoplanets'/></SlideBox>
                     <SlideBox><Project name='Saper' description='A minesweeping game' img='/img/Saper-transparent.png' subpage='Saper'/></SlideBox>
                 </Container>

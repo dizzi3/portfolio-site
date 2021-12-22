@@ -25,7 +25,7 @@ function Chatty(){
 
                     <ProjectNavbar setContactFormDisplay={setContactFormDisplay}/>
 
-                    <Image src='/img/Website.png' w='100%' />
+                    <Image src='/img/Website.png' w='100%' border={useColorModeValue('none', '2px solid #f4f4f4')}/>
 
                     <Text fontFamily='DM Sans, sans-serif;' fontSize='1.4em' mt='1.5em'
                         borderBottom={useColorModeValue('1px solid #000', '1px solid #fff')} pb='2.5em'>
